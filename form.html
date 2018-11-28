@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formulaire</title>
+	<?
+<!--fonction affiche ou pas liste-->
+<script language='javascript'>
+function affichechoix(texte)
+{
+if (texte=="continent")
+document.getElementById("choixcont").style.visibility= 'visible';
+else
+document.getElementById("choixcont").style.visibility= 'hidden';
+
+
+if (texte=="pays")
+document.getElementById("choixpays").style.visibility= 'visible';
+else
+document.getElementById("choixpays").style.visibility= 'hidden';
+
+if (texte=="ville")
+document.getElementById("choixville").style.visibility= 'visible';
+else
+document.getElementById("choixville").style.visibility= 'hidden';
+}
+
+</script>
+
+?>
+
+</head>
+	<body>
+		<form id="liste" method="GET">
+		<p>Votre nom:</p>
+		<input type="text" name="nom" placeholder="nom"><br/>
+		<p>Votre prenom:</p>
+		<input type="text" name="prenom" placeholder="prenom">
+		<p>
+
+		<select>
+		
+
+
+
+		</select>
+
+		</form>
+		
+	</body>
+</html>
+
+<?
+<FORM method="GET" >
+
+<SELECT onchange="affichechoix(this.value)" name="triprincipal" >
+<option value="continent">Continents</option>
+<option value="Pays">Pays</option>
+<option value="Ville">Ville</option>
+</SELECT>
+
+<p><center><div id="choixcont" style="visibility:hidden">
+<SELECT name="tricont">
+<option value=""> choisissiez votre continent</option>
+<option value=""> ================</option>
+          
+</SELECT></div>
+
+<div id="choixpays" style="visibility:hidden">
+<SELECT name="tripays" >
+ <option value=""> choisissiez un pays</option>
+<option value=""> ================</option>
+</SELECT></div>
+
+<div id="choixville" style="visibility:hidden">
+<SELECT name="triville" >
+ <option value=""> choisissiez une ville</option>
+<option value=""> ================</option>
+         
+</SELECT></div>
+</center>
+
+
+
+
+<input type="submit" name="go" value="Afficher les annonces" />
+</form>
+?>
