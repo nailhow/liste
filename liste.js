@@ -1,4 +1,4 @@
-<?
+
 <script language='javascript'>
 	function affichechoix(texte)
 	{
